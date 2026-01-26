@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <title>Contact Us | Samutkarsh Bharat</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Samutkarsh Bharat for queries and support">
+
+    <link rel="shortcut icon" href="Samutkarsh_logo.png" type="image/x-icon" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- AOS Animations -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <style>
+        /* All styles kept same from your original page */
+        :root { --primary:#FF6B35; --primary-dark:#D8572A; --secondary:#004E89; --light:#FFF8F0; --dark:#292929; --text:#444; }
+        body { font-family:'Poppins',sans-serif; background:#f9f9f9; color:var(--text); }
+        .navbar { background:#fff!important; box-shadow:0 2px 10px rgba(0,0,0,.1); }
+        
+        /* HERO Contact Section */
+        .contact-hero {
+            background: linear-gradient(135deg, #B22222 10%, #FFA500 50%, #FF4500 80%);
+            color:#fff;
+            padding:120px 0;
+            text-align:center;
+        }
+        .contact-hero h1 { font-size:2.5rem; font-weight:700; }
+        .contact-hero p { font-size:1.1rem; opacity:.9; }
+
+        /* Contact Card */
+        .contact-card {
+            background:#fff;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 2px 12px rgba(0,0,0,0.15);
+        }
+        .contact-icon {
+            font-size:25px;
+            color:var(--primary);
+            width:50px;
+            height:50px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            border-radius:50%;
+            background:#ffe4d6;
+        }
+        .form-control:focus {
+            border-color:var(--primary);
+            box-shadow:0 0 0 .2rem rgba(255,107,53,0.25);
+        }
+
+        
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+            margin-top: 20px;
+        }
+        
+        .footer-logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        .footer-logo span {
+            color: var(--primary);
+        }
+        
+        .footer-about {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            opacity: 0.8;
+        }
+        
+        .footer-links h5 {
+            color: white;
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-links h5:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background: var(--primary);
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            margin-top: 40px;
+        }
+
+        .back-to-top { position:fixed; bottom:20px; right:20px; background:var(--primary); width:40px; height:40px;
+            color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; opacity:0; visibility:hidden; }
+        .back-to-top.active { opacity:1; visibility:visible; }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">
+                <img src="Samutkarsh_logo.png" alt="Samutkarsh Bharat" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 8px; object-fit: cover;">
+                Samutkarsh Bharat
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong><P style="font-size: 12px;color:black;,font-family:'Trebuchet MS', sans-serif; margin-right:8px;font-weight: 700;">CIN: U80904DL2021PTC388434</P></strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Contact Us</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li> -->
+                    <!-- <li class="nav-item ms-lg-2"><a class="btn btn-outline-primary btn-sm" href="#login">Login</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!-- HERO SECTION -->
+<section class="contact-hero" id="contact">
+    <div class="container">
+        <h1 data-aos="fade-up">Contact Us</h1>
+        <p data-aos="fade-up" data-aos-delay="100">
+            We are here to assist you with any queries, event details or technical support.
+        </p>
+    </div>
+</section>
+<br><br>
+<!-- CONTACT SECTION -->
+<section class="section">
+    <div class="container">
+        <div class="row g-4">
+
+            <!-- Left: Contact Details -->
+            <div class="col-lg-5" data-aos="fade-right">
+                <div class="contact-card">
+                    <h4 class="mb-3">Get in Touch</h4>
+
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="contact-icon"><i class="fa fa-phone"></i></div>
+                        <div class="ms-3">
+                            <h6 class="fw-bold">Phone</h6>
+                            <p class="mb-0"><a href="tel:+91 9717668080">+91 9717668080</a></p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="contact-icon"><i class="fa fa-envelope"></i></div>
+                        <div class="ms-3">
+                            <h6 class="fw-bold">Email</h6>
+                            <p class="mb-0"><a href="mailto:samutkarshbharatresearch@samutkarsh.in">samutkarshbharatresearch@samutkarsh.in</a></p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start">
+                        <div class="contact-icon"><i class="fa fa-map-marker-alt"></i></div>
+                        <div class="ms-3">
+                            <h6 class="fw-bold">Address</h6>
+                            <p class="mb-0" style="font-size: 15px;">
+                                SAMUTKARSH BHARAT RESEARCH PRIVATE LIMITED<br>
+                                12-B Upper Floor, BLK-H Single Storey, Vijay Nagar<br>
+                                North East Delhi, India - 110009
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <a href="#" class="footer-logo"><span>Samutkarsh Bharat</span></a>
+                    <p class="footer-about">Platform for events and activities, dedicated to nation-building through character development and social service.</p>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <div class="footer-links">
+                        <h5>Quick Links</h5>
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="#events">Events</a></li>
+                            <!-- <li><a href="{% url 'login' %}">Login</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <div class="footer-links">
+                        <h5>Events</h5>
+                        <ul>
+                            <li>KeshavKunj Darshan</li>
+                            <li>Sangh Sikshan Varg</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="footer-links">
+                        <h5>Contact</h5>
+                        <ul>
+                            <li><a href="tel:+91 9717668080"><i class="fas fa-phone-alt me-2"></i>+91 9717668080</a></li>
+                            <li><a href="mailto:samutkarshbharatresearch@samutkarsh.in"><i class="fas fa-envelope me-2"></i>samutkarshbharatresearch@gmail.com</a></li>
+                            <li><a href="#"><i class="fas fa-map-marker-alt me-2"></i><p style="font-size: 12px;">SAMUTKARSH BHARAT RESEARCH PRIVATE LIMITED</p> <i style="font-size:10px;"> 12-B Upper Floor, BLK-H Single Storey,Vijay Nagar Delhi<br>North East Delhi, India-110009<</i></p> </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center">
+                        <p class="mb-3 mb-md-0">&copy; 2025 Samutkarsh. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init();
+
+    $(window).scroll(function(){
+        $('.back-to-top').toggleClass('active', $(this).scrollTop() > 300);
+    });
+</script>
+
+</body>
+</html>
